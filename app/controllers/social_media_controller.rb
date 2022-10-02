@@ -1,6 +1,6 @@
 class SocialMediaController < ApplicationController
   def index
-    render json: { message: "test" }
+    render json: json_response
   end
 
   private

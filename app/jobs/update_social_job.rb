@@ -1,6 +1,8 @@
 require 'sidekiq-scheduler'
 
-class UpdateSocialJob < ApplicationJob
+class UpdateSocialJob
+  include Sidekiq::Worker
+
   queue_as :default
 
   def perform

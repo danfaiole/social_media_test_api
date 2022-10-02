@@ -1,0 +1,4 @@
+:schedule:
+  UpdateSocialJob:
+    interval: '3m'
+    class: UpdateSocialJob

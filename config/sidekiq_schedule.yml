@@ -1,4 +1,0 @@
-:schedule:
-  update_social_job:
-    every: '3m'
-    class: UpdateSocialJob

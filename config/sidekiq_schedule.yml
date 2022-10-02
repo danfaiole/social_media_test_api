@@ -1,0 +1,4 @@
+:schedule:
+  update_social_job:
+    every: '2m'
+    class: UpdateSocialJob

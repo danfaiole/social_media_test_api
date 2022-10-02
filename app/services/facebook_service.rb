@@ -12,7 +12,7 @@ class FacebookService
     end
 
     def process_response(response)
-      Facebook.create!(response_body: response.body) if response.code == 200
+      Facebook.create!(response_body: JSON.parse(response.body)) if response.code == 200
     end
   end
 end

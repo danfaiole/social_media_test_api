@@ -12,7 +12,7 @@ class TwitterService
     end
 
     def process_response(response)
-      Twitter.create!(response_body: response.body) if response.code == 200
+      Twitter.create!(response_body: JSON.parse(response.body)) if response.code == 200
     end
   end
 end

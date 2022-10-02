@@ -12,7 +12,7 @@ class InstagramService
     end
 
     def process_response(response)
-      Instagram.create!(response_body: response.body) if response.code == 200
+      Instagram.create!(response_body: JSON.parse(response.body)) if response.code == 200
     end
   end
 end

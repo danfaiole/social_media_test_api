@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'sidekiq-scheduler'
 
+# This worker updates the "cache" each 3 minutes with responses from all social media
 class UpdateSocialJob
   include Sidekiq::Worker
 
@@ -9,7 +12,7 @@ class UpdateSocialJob
     [
       FacebookService,
       InstagramService,
-       TwitterService
+      TwitterService
     ].each do |service|
       service.update
     end
